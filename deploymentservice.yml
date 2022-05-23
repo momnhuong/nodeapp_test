@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: nhuongtrieu/nodeapp
+        image: nhuongtrieu/nodeapp:"${env.BUILD_NUMBER}"
         ports:
         - containerPort: 3000
         
