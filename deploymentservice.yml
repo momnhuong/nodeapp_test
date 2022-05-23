@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: nhuongtrieu/nodeapp:latest
+        image: nhuongtrieu/nodeapp:'${GIT_REVISION,length=7}'
         ports:
         - containerPort: 3000
         
