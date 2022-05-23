@@ -5,12 +5,12 @@ metadata:
   labels:
     app: nodeapp
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUserge: 3
-      maxUnavailable: 2
+      maxSurge: 3
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: nodeapp
