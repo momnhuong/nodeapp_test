@@ -18,7 +18,10 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: nhuongtrieu/nodeapp:v0.81
+        #image: nhuongtrieu/nodeapp:latest
+        imagePullSecrets:
+          - name: dockerhublogin
+
         ports:
         - containerPort: 3000
         
