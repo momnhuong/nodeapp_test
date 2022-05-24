@@ -5,12 +5,9 @@ metadata:
   labels:
     app: nodeapp
 spec:
-  replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 3
-      maxUnavailable: 0
+  replicas: 3
+  strategy: # change here
+    type: RollingUpdate # strategy type is Recreate or RollingUpdate. Default is Recreate
   selector:
     matchLabels:
       app: nodeapp
